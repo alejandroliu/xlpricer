@@ -66,15 +66,14 @@ jobs:
       - name: Prepare deploy directory
         run: |
           rm -rf deploy
-          mkdir -p deploy/v1/prices deploy/v2
+          mkdir -p deploy/v1 deploy/v2
           cp index.html deploy/index.html
-          cp v1/spa/index.html deploy/v1/index.html
-          # v1 weekly price sheet download page (v1/pages/index.html)
-          cp v1/pages/index.html deploy/v1/prices/index.html
-          cp v1/builds.json deploy/v1/prices/builds.json
-          cp v1/prices-*.xlsx deploy/v1/prices/ || true
+          # v1 price sheet download page (what the old weekly workflow published)
+          cp v1/pages/index.html deploy/v1/index.html
+          cp v1/builds.json deploy/v1/builds.json
+          cp v1/prices-*.xlsx deploy/v1/ || true
           # v1 docs (linked as "Project Docs" from the download page)
-          if [ -d v1/docs/_build/html ]; then cp -a v1/docs/_build/html deploy/v1/prices/docs; fi
+          if [ -d v1/docs/_build/html ]; then cp -a v1/docs/_build/html deploy/v1/docs; fi
           # v2 SPA
           cp -a v2/dist/. deploy/v2/
           # Keep prices.xlsx at the site root for backwards-compatible links.

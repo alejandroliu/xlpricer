@@ -164,7 +164,7 @@ the v2 SPA.  The workflow:
 2. Runs `python -m xlpricer build` to generate a fresh workbook.
 3. Preserves the last 12 builds (older ones are pruned).
 4. Deploys the workbook, a `builds.json` manifest, and the download
-   page to GitHub Pages under `/v1/prices/`.
+   page to GitHub Pages under `/v1/`.
 
 The latest workbook is always available at the project's GitHub Pages
 site.  Previous versions are retained for reference.
