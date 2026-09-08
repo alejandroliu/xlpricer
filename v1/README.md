@@ -156,14 +156,15 @@ significantly.
 
 # Automated Builds
 
-Price sheets are automatically rebuilt every Monday via a GitHub
-Actions workflow (`.github/workflows/weekly-prices.yml`).  The
-workflow:
+Price sheets are automatically rebuilt every Monday by the site's
+deploy workflow (`.github/workflows/deploy.yml`), which also builds
+the v2 SPA.  The workflow:
 
 1. Checks out the repository and installs dependencies.
 2. Runs `python -m xlpricer build` to generate a fresh workbook.
 3. Preserves the last 12 builds (older ones are pruned).
-4. Deploys the workbook and a `builds.json` manifest to GitHub Pages.
+4. Deploys the workbook, a `builds.json` manifest, and the download
+   page to GitHub Pages under `/v1/prices/`.
 
 The latest workbook is always available at the project's GitHub Pages
 site.  Previous versions are retained for reference.

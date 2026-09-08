@@ -50,7 +50,7 @@ manifest: ## Generate includes/manifest.json from git history
 dev: manifest node_modules ## Start Vite dev server
 	npm run dev
 
-build: manifest node_modules ## Build for production (use BASE=/repo/ for GH Pages)
+build: manifest node_modules ## Build for production (use BASE=./ for GH Pages)
 	npm run build -- --base=$(BASE)
 
 preview: build ## Preview production build locally
