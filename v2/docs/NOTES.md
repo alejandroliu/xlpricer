@@ -24,25 +24,26 @@ UI.
 
 ## TODO
 * [ ] be more compatible with V1... use similar file naming.
-* Wizard:
-  * Generate
-    * ESA on/off
-    * name?
-    * project?
-  * Update prices tab.
-  * Prep - removes "prices" and "volume" tabs.
+* Option:
+  * xlsx/xlsm
+* Tool convert xlsx <-> xlsm and (optional) reprice
+* Macros
+  * Remove prices, (volume, tab?)
+  * Add new Components tab (modifies volume tab)
+  * Find VMs and adds them (Shortcut)
+***
+* ~~Wizard:~~
+  * ~~Generate~~
+    * ~~ESA on/off~~
+  * ~~Update prices tab.~~
+  * ~~Prep - removes "prices" and "volume" tabs.~~
 * Save configuration
   * Export/import to JSON
-  * Import from XLSX
+  * ~~Import from XLSX~~
 * UX
   * Enter on Last row adds a new empty row
-  * Add Component dialog/Button next to a component to select
   * Other preload templates.  Add a "bare.csv"
   * Edit includes
-* [x] Last-modifed timestamps seem to be lost somewhere.  How to keep
-  track of changes to include files for the T tab.  Alternatives:
-  * Add some metadata lines to the files (during build -> gh pages)?
-  * Create a manifest.json during build.
 
 ***
 
